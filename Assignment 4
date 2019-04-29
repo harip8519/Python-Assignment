@@ -1,0 +1,41 @@
+print("Enter the OTP - 1234")
+o = input("Enter the OTP")
+if o == 1234:
+  print("Yes")
+  print("Choose your preference!")
+  print("NEW ACCOUNT, WITHDRAW, DEPOSIT, BALANCE INQUIRY, DEMAND DRAFT, CANCEL")
+  pref = raw_input("Enter your preference: ")
+  if(pref == "NEW ACCOUNT"):
+    name = raw_input("Name: ")
+    age = raw_input("Age: ")
+    addr = raw_input("Address: ")
+    cont = raw_input("Contact Number: ")
+    gend = raw_input("Gender: ")
+    print "ACCOUNT HOLDER DETAILS:  \n Name: %s \n Age: %s \n Address: %s \n Contact: %s \n Gender: %s" % (name,age,addr,cont,gend)
+  elif(pref == "WITHDRAW"):
+    amt = input("Enter the amount you want to withdraw")
+    if(amt <= 100 and amt >= 10000):
+      print("LIMIT EXCEEDED")
+    else:
+      print("HERE IS YOUR MONEY!")
+
+  elif(pref == "DEPOSIT"):
+    dep = input("Enter the amount of deposit")
+    if(dep % 5 == 0):
+      print("Money is deposited")
+    else:
+      print("Enter valid amount")
+  elif(pref == "BALANCE INQUIRY"):
+    print("Choose Deposit amount or Outstanding balance or Minimum Due Amount")
+  elif(pref == "DEMAND DRAFT"):
+    nbank = raw_input("Name of Bank: ")
+    nacc = raw_input("Name of Account Holder: ")
+    nbrch = raw_input("Name of branch: ")
+    tamt = raw_input("Total Amount: ")
+    print "DEMAND DRAFT:  \n Name of Bank: %s \n Name of Account Holder: %s \n Name of branch:  %s \n Total Amount: %s" % (nbank,nacc,nbrch,tamt)
+  else:
+    print("CANCEL")
+    exit
+
+else:
+  print("Sorry, Try again!")
